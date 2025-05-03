@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Game Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Game Library</h1>
+  <div class="game-grid">
+
+    <!-- Game Card -->
+    <div class="game-card">
+      <img src="assets/huh-gambling-v1.png" alt="Game 1" />
+      <h2>HuH Gambling!?</h2>
+
+      <!-- Version dropdown -->
+      <select class="version-select" onchange="updatePlayLink(this)">
+        <option value="games/huh_gambling_v1.html" data-stats="V1.0 - Initial release">Version 1.0</option>
+      </select>
+
+      <!-- Changelog / Stats -->
+      <p class="version-info">V1.0 - Initial release</p>
+
+      <!-- Play button -->
+      <a class="play-button" href="games//huh_gambling_v1.html" target="_blank">Play</a>
+    </div>
+
+  </div>
+
+  <script>
+    function updatePlayLink(selectElement) {
+      const selected = selectElement.options[selectElement.selectedIndex];
+      const gameUrl = selected.value;
+      const stats = selected.getAttribute('data-stats');
+
+      const card = selectElement.closest('.game-card');
+      card.querySelector('.version-info').textContent = stats;
+      card.querySelector('.play-button').href = gameUrl;
+    }
+  </script>
+</body>
+</html>
