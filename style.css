@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #c3f0f9, #f0faff);
+  color: #033e59;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  color: #0aa1dd;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.game-card {
+  background: #ffffff;
+  border: 2px solid #aee3f5;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.game-card h2 {
+  font-size: 1.2rem;
+  color: #046b96;
+  margin: 0.5rem 0;
+}
+
+.game-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0aa1dd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.game-card a:hover {
+  background-color: #088cbe;
+}
